@@ -4,7 +4,8 @@
 ## Project: Explore US Bikeshare Data
 
 ### Description
-The user can analyse the Data provided by the bike share system `Motivate` of three large cities: **Chicago, New York City, and Washington, DC**. An input field prompts the user to enter the **city** to be analysed.
+The user can analyse the Data provided by the bike share system `Motivate` of three large cities: **Chicago, New York City, and Washington, DC**.  
+An input field prompts the user to enter the **city** to be analysed.  
 In addition, the user can limit the data to a specific **month** or **weekday** if required.
 
 The **calculated statistics** are:
@@ -27,7 +28,6 @@ The **calculated statistics** are:
 ### Files used
 **Script:**
 - bikeshare.py
-
 **Data Files:**
 - chicago.csv
 - new_york_city.csv
