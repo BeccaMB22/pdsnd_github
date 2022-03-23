@@ -26,8 +26,7 @@ The **calculated statistics** are:
     - earliest, most recent, most common year of birth (_only available for NYC and Chicago_)
 
 ### Files used
-**Script:**
-- bikeshare.py
+**Script:** bikeshare.py  
 **Data Files:**
 - chicago.csv
 - new_york_city.csv
