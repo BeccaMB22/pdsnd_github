@@ -24,8 +24,7 @@ def get_filters():
     # get user input for city (chicago, new york city, washington).
     while True: #to handle invalid inputs
         try:
-            city_input=input('Which city of the following ones do you want to analyse, '+text_col_blue+'Chicago, New York City '+text_normal+'or '
-                             +text_col_blue+'Washington?'+text_normal+'\n Please enter the city name: ')
+            city_input=input('Which city of the following ones do you want to analyse: {}Chicago, New York City or Washington?{}\n Please enter the city name: '.format(text_col_blue,text_normal))
             city=city_input.lower().strip(' ')
             if city=='chicago' or city=='new york city' or city=='washington':
                 break
@@ -37,8 +36,7 @@ def get_filters():
     # get user input for month (all, january, february, ... , june)
     while True:
         try:
-            month_input=input('Is there a spezific month between '+text_col_blue+'january '+text_normal+'and '+text_col_blue+'june'+text_normal+
-                    ' you want to analyse or '+text_col_blue+'all'+text_normal+' of them?\n Please enter: ')
+            month_input=input('Is there a spezific month between {}january and june{} you want to analyse or {}all{} of them?\n Please enter: '.format(text_col_blue,text_normal,text_col_blue,text_normal))
             month=month_input.lower().strip(' ')
             months = ['january', 'february', 'march', 'april', 'may', 'june']
             if month in months or month=="all":
@@ -53,8 +51,7 @@ def get_filters():
     # get user input for day of week (all, monday, tuesday, ... sunday)
     while True:
         try:
-            day_input=input('Is there a spezific weekday (e.g. '+text_col_blue+'Monday'+text_normal+
-                            ') you want to analyse or '+text_col_blue+'all'+text_normal+' of them?\n Please enter: ')
+            day_input=input('Is there a spezific weekday (e.g. {}Monday{} you want to analyse or {}all{} of them?\n Please enter: '.format(text_col_blue,text_normal,text_col_blue,text_normal))
             day=day_input.lower().strip(' ')
             weekdays = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday','saturday']
             if day in weekdays or day=="all":
@@ -218,7 +215,7 @@ def user_stats(df,city):
         year_max=int(df.nlargest(1,'Birth Year')['Birth Year'].values[0])
         year_common=int(df['Birth Year'].dropna().mode()[0])
 
-        text_gender_year='The users have {} types of gender.\n{} is the earliest,\n{} is the most recent and\n{} is the most common Birth Year'       .format(gender_count,year_min,year_max,year_common)
+        text_gender_year='The users have {} types of gender.\n{} is the earliest,\n{} is the most recent and\n{} is the most common Birth Year'.format(gender_count,year_min,year_max,year_common)
     else:
         text_gender_year='For Washington there are no information about the users gender and birth year.'
 
